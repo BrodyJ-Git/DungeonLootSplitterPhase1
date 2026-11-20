@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Brody">
+   <link rel="stylesheet" href="css/style.css">
+  <title>Dungeon Loot Splitter</title>
+</head>
+<body>
+    <header>
+        <h1>Dungeon Loot Splitter</h1>
+    </header>
+
+    <main>
+        <section class="panel">
+            <h2>Party Setup</h2>
+            <label for="party">Number of Party Members:</label>
+            <input type="number" id="party" name="party">
+        </section>
+
+        <section class="panel">
+            <h2>Add Loot</h2>
+            <label for="name">Loot Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="itemValue">Loot Value:</label>
+            <input type="number" id="itemValue" name="value">
+
+            <button id="add">Add Loot</button>
+            <button id="remove">Remove Added Loot</button>
+            <p id="warning"></p>
+        </section>
+
+        <section class="panel">
+            <h2>Loot List</h2>
+            <p id="loot"></p>
+            <p id="total"></p>
+        </section>
+
+        <section class="panel">
+            <h2>Split Loot</h2>
+            <button id="split">Split Loot</button>
+            <p id="lootSplit">Loot Per Party Member:</p>
+            <p id="totalSplit">Total Loot:</p>
+
+            <p id="partyWarning"></p>
+        </section>
+
+        <section class="panel reflection">
+            <h2>Logic Explanation</h2>
+            <p>The loot array works by validating each item the user inserts and then adds it to the array. As a bonus the user can also remove loot. After adding or removing loot, it calls the renderLoot function to update the values and loot list. It then displays it all on the screen. There are two loops used both in the renderLoot function with one updating the loot list and the other updating the values. The if statements make a decision in every function, however, it's mainly used for checking the party size and loot for validity. Outside of that it is checking if there are still items in the loot list.
+            </p>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
